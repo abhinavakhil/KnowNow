@@ -1,0 +1,43 @@
+#navBar {
+  background-color: black;
+}
+nav ul li.active {
+  background-color: green;
+}
+a:hover:not(.active) {
+  background-color: green;
+}
+#main {
+  background-color: rgba(0, 0, 0, 0.829);
+  text-align: center;
+}
+#main_h,
+#team_h {
+  color: white;
+  padding: 30px;
+  font-size: 5vw;
+  margin: 0px;
+  font-family: Copperplate, Copperplate Gothic Light, fantasy;
+
+  border: 4px solid green;
+}
+#main_c {
+  color: white;
+  margin: 0px;
+  font-size: 2vw;
+  padding: 20px 5vw;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#team {
+  background-color: rgba(0, 0, 0, 0.829);
+  text-align: center;
+}
+#content p {
+  color: white;
+  margin: 0px;
+  font-size: 30px;
+  padding: 20px 400px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
