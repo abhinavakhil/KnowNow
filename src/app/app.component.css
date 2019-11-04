@@ -1,0 +1,8 @@
+.active {
+  background-color: grey;
+  padding: 10px;
+}
+.navbar {
+  font-weight: 700;
+  font-style: italic;
+}

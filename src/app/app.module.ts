@@ -11,9 +11,16 @@ import { NewsService } from "./service/news.service";
 import { LoginComponent } from "./login/login.component";
 import { LogoutComponent } from "./logout/logout.component";
 import { NgbModule, NgbAlertModule } from "@ng-bootstrap/ng-bootstrap";
-import { NewsdetailComponent } from './newsdetail/newsdetail.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { NewsdetailComponent } from "./newsdetail/newsdetail.component";
+import { HomeComponent } from "./home/home.component";
+import { AboutComponent } from "./about/about.component";
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+import { AuthService } from "./service/auth.service";
+import { AuthGuardService } from "./service/auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -28,12 +35,15 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase, "medoc"),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     HttpClientModule,
     FormsModule,
     NgbModule,
     NgbAlertModule
   ],
-  providers: [NewsService],
+  providers: [AuthGuardService, AuthService, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

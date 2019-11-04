@@ -6,9 +6,13 @@ import { LogoutComponent } from "./logout/logout.component";
 import { NewsdetailComponent } from "./newsdetail/newsdetail.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
+import { AuthGuardService } from "./service/auth-guard.service";
 
 const routes: Routes = [
-  { path: "news", component: NewspageComponent },
+  {
+    path: "news",
+    component: NewspageComponent
+  },
   { path: "login", component: LoginComponent },
   { path: "logout", component: LogoutComponent },
   { path: "newsdetail", component: NewsdetailComponent },
