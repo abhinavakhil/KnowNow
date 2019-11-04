@@ -11,7 +11,7 @@ import { auth } from "firebase/app";
 })
 export class AuthService {
   private user: Observable<firebase.User>;
-  private userDetails: firebase.User = null;
+  public userDetails: firebase.User = null;
 
   constructor(private fAuth: AngularFireAuth, private router: Router) {
     this.user = this.fAuth.authState;
@@ -32,6 +32,12 @@ export class AuthService {
     );
   }
 
+  signInWithFacebook() {
+    return this.fAuth.auth.signInWithPopup(
+      new firebase.auth.FacebookAuthProvider()
+    );
+  }
+
   isLoggedIn() {
     if (this.userDetails == null) {
       return false;
@@ -41,6 +47,17 @@ export class AuthService {
   }
 
   async logout() {
-    await this.fAuth.auth.signOut().then(res => this.router.navigate(["/"]));
+    await this.fAuth.auth.signOut().then(res => {
+      this.router.navigate(["/"]);
+      alert("You have been SuccessFully Loggedout!");
+    });
+  }
+
+  signInRegular(email, password) {
+    const credential = firebase.auth.EmailAuthProvider.credential(
+      email,
+      password
+    );
+    return this.fAuth.auth.signInWithEmailAndPassword(email, password);
   }
 }

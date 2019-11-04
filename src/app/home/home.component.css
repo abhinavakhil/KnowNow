@@ -27,8 +27,8 @@ a:hover:not(.active) {
 #content p {
   color: white;
   margin: 0px;
-  font-size: 30px;
-  padding: 20px 400px;
+  font-size: 3vw;
+  padding: 20px 5vw;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }

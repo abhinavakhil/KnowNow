@@ -5,4 +5,20 @@
 .navbar {
   font-weight: 700;
   font-style: italic;
+  background-color: black;
+}
+.navbar-brand {
+  font-size: 45px;
+  font-family: Copperplate, Copperplate Gothic Light, fantasy;
+  font-style: normal;
+}
+
+.nav-item {
+  font-size: 1.4vw;
+}
+.myactive {
+  color: #fff;
+}
+.Logout:hover {
+  cursor: pointer;
 }

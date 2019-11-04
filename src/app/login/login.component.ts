@@ -8,9 +8,15 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+  verticalImage = "assets\vertical-line.png";
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {}
+
+  user = {
+    email: "",
+    password: ""
+  };
 
   async signInWithGoogle() {
     await this.authService
@@ -19,5 +25,25 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["news"]);
       })
       .catch(err => console.log(err));
+  }
+
+  signWithFacebook() {
+    this.authService
+      .signInWithFacebook()
+      .then(res => {
+        this.router.navigate(["news"]);
+      })
+      .catch(err => console.log(err));
+  }
+
+  signInWithEmail() {
+    this.authService
+      .signInRegular(this.user.email, this.user.password)
+      .then(res => {
+        console.log(res);
+
+        this.router.navigate(["dashboard"]);
+      })
+      .catch(err => console.log("error: " + err));
   }
 }

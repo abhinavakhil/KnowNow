@@ -1,5 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">KnowNow</a>
+  <a style="padding-left: 15px; " href="#" class="navbar-brand">
+    <img
+      src="assets/news-announcment-gif.gif"
+      alt=""
+      width="40px"
+      style="padding-top: 15px; float: left;"
+    />
+    <span style="padding-left:15px;">KnowNow</span>
+  </a>
   <button
     class="navbar-toggler"
     type="button"
@@ -8,11 +16,16 @@
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation"
+    (click)="toggleNavbar()"
   >
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+    [ngClass]="{ show: navbarOpen }"
+  >
     <ul class="navbar-nav ml-auto">
       <li class="nav-item ">
         <a class="nav-link" routerLinkActive="active" routerLink="/news"
@@ -24,17 +37,23 @@
           >About</a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="login"
-          ><i class="fas fa-sign-in-alt" style="color:red"></i> Login</a
-        >
+      <li class="nav-item" *ngIf="authService.isLoggedIn(); else elseBlock">
+        <a class="nav-link myactive">
+          <p>{{ authService.userDetails.displayName }}</p>
+        </a>
       </li>
-      <li class="nav-item">
+      <ng-template #elseBlock>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="login"
+            ><i class="fas fa-sign-in-alt" style="color:green"></i> Login</a
+          >
+        </li>
+      </ng-template>
+      <li class="nav-item" *ngIf="authService.isLoggedIn()">
         <a
-          class="nav-link"
+          class="nav-link Logout"
           routerLinkActive="active"
-          (click)="authService.Logout()"
-          routerLink="/"
+          (click)="authService.logout()"
           [routerLinkActiveOptions]="{ exact: true }"
           ><i class="fas fa-sign-out-alt" style="color:red"></i> Logout</a
         >
