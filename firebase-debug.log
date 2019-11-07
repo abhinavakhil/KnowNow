@@ -1,0 +1,149 @@
+[debug] [2019-11-07T07:42:02.953Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:42:02.957Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-11-07T07:42:02.957Z] CLI Version:   7.6.2
+[debug] [2019-11-07T07:42:02.957Z] Platform:      win32
+[debug] [2019-11-07T07:42:02.957Z] Node Version:  v10.16.2
+[debug] [2019-11-07T07:42:02.960Z] Time:          Thu Nov 07 2019 13:12:02 GMT+0530 (India Standard Time)
+[debug] [2019-11-07T07:42:02.960Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:42:02.960Z] 
+[debug] [2019-11-07T07:42:02.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T07:42:02.976Z] > authorizing via signed-in user
+[debug] [2019-11-07T07:42:02.976Z] [iam] checking project knownow-6d965 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-11-07T07:42:02.979Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/knownow-6d965:testIamPermissions  
+
+[debug] [2019-11-07T07:42:10.887Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-07T07:42:10.901Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/knownow-6d965  
+ 
+[debug] [2019-11-07T07:42:13.872Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'knownow-6d965'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2019-11-07T07:42:13.900Z] >>> HTTP REQUEST PUT https://knownow-6d965.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2019-11-07T07:42:17.345Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database knownow-6d965 is valid
+[debug] [2019-11-07T07:42:17.357Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/knownow-6d965/versions  
+
+[debug] [2019-11-07T07:42:21.424Z] <<< HTTP RESPONSE 200
+[info] i  hosting[knownow-6d965]: beginning deploy...
+[info] i  hosting[knownow-6d965]: found 27 files in dist/medoc
+[debug] [2019-11-07T07:42:21.776Z] [hosting] hash cache [ZGlzdFxtZWRvYw] stored for 27 files
+[debug] [2019-11-07T07:42:21.777Z] [hosting][hash queue][FINAL]
+[debug] [2019-11-07T07:42:21.777Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/knownow-6d965/versions/4dba569351885a1a:populateFiles  
+ <request body omitted>
+[debug] [2019-11-07T07:42:24.704Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-07T07:42:24.733Z] [hosting][populate queue][FINAL]
+[debug] [2019-11-07T07:42:24.733Z] [hosting] uploads queued: 12
+[debug] [2019-11-07T07:43:02.276Z] [hosting][upload queue][FINAL]
+[info] +  hosting[knownow-6d965]: file upload complete
+[debug] [2019-11-07T07:43:02.280Z] [hosting] deploy completed after 40852ms
+[info] i  database: releasing rules...
+[debug] [2019-11-07T07:43:14.956Z] >>> HTTP REQUEST PUT https://knownow-6d965.firebaseio.com/.settings/rules.json  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2019-11-07T07:44:25.048Z] Error: read ECONNRESET
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:111:27)
+[error] 
+[error] Error: Server Error. read ECONNRESET
+[debug] [2019-11-07T07:45:01.247Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:45:01.251Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-11-07T07:45:01.251Z] CLI Version:   7.6.2
+[debug] [2019-11-07T07:45:01.251Z] Platform:      win32
+[debug] [2019-11-07T07:45:01.251Z] Node Version:  v10.16.2
+[debug] [2019-11-07T07:45:01.254Z] Time:          Thu Nov 07 2019 13:15:01 GMT+0530 (India Standard Time)
+[debug] [2019-11-07T07:45:01.254Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:45:01.254Z] 
+[debug] [2019-11-07T07:45:01.271Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T07:45:01.272Z] > authorizing via signed-in user
+[debug] [2019-11-07T07:45:01.272Z] [iam] checking project knownow-6d965 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-11-07T07:45:01.275Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/knownow-6d965:testIamPermissions  
+
+[debug] [2019-11-07T07:46:00.169Z] Error: read ECONNRESET
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:111:27)
+[error] 
+[error] Error: Server Error. read ECONNRESET
+[debug] [2019-11-07T07:46:55.976Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:46:55.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-11-07T07:46:55.980Z] CLI Version:   7.6.2
+[debug] [2019-11-07T07:46:55.981Z] Platform:      win32
+[debug] [2019-11-07T07:46:55.981Z] Node Version:  v10.16.2
+[debug] [2019-11-07T07:46:55.985Z] Time:          Thu Nov 07 2019 13:16:55 GMT+0530 (India Standard Time)
+[debug] [2019-11-07T07:46:55.985Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:46:55.985Z] 
+[debug] [2019-11-07T07:46:56.001Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T07:46:56.002Z] > authorizing via signed-in user
+[debug] [2019-11-07T07:46:56.002Z] [iam] checking project knownow-6d965 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-11-07T07:46:56.007Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/knownow-6d965:testIamPermissions  
+
+[debug] [2019-11-07T07:47:22.477Z] Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1095:19)
+    at Object.onceWrapper (events.js:286:20)
+    at TLSSocket.emit (events.js:203:15)
+    at TLSSocket.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established
+[debug] [2019-11-07T07:47:33.085Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:47:33.089Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-11-07T07:47:33.089Z] CLI Version:   7.6.2
+[debug] [2019-11-07T07:47:33.090Z] Platform:      win32
+[debug] [2019-11-07T07:47:33.090Z] Node Version:  v10.16.2
+[debug] [2019-11-07T07:47:33.093Z] Time:          Thu Nov 07 2019 13:17:33 GMT+0530 (India Standard Time)
+[debug] [2019-11-07T07:47:33.093Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:47:33.093Z] 
+[debug] [2019-11-07T07:47:33.109Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T07:47:33.110Z] > authorizing via signed-in user
+[debug] [2019-11-07T07:47:33.110Z] [iam] checking project knownow-6d965 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-11-07T07:47:33.113Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/knownow-6d965:testIamPermissions  
+
+[debug] [2019-11-07T07:47:41.568Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-07T07:47:41.582Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/knownow-6d965  
+ 
+[debug] [2019-11-07T07:47:53.878Z] Server Error. Client network socket disconnected before secure TLS connection was established
+[debug] [2019-11-07T07:48:10.603Z] FirebaseError: Server Error. Client network socket disconnected before secure TLS connection was established
+    at Request._callback (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:30:31)
+    at self.callback (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.onRequestError (C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:881:8)
+    at ClientRequest.emit (events.js:203:15)
+    at ClientRequest.EventEmitter.emit (domain.js:448:20)
+    at TLSSocket.socketErrorListener (_http_client.js:392:9)
+    at TLSSocket.emit (events.js:198:13)
+    at TLSSocket.EventEmitter.emit (domain.js:448:20)
+[error] 
+[error] Error: Failed to get Firebase project knownow-6d965. Please make sure the project exists and your account has permission to access it.
+[debug] [2019-11-07T07:48:34.641Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:48:34.646Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhinav Akhil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-11-07T07:48:34.646Z] CLI Version:   7.6.2
+[debug] [2019-11-07T07:48:34.646Z] Platform:      win32
+[debug] [2019-11-07T07:48:34.646Z] Node Version:  v10.16.2
+[debug] [2019-11-07T07:48:34.649Z] Time:          Thu Nov 07 2019 13:18:34 GMT+0530 (India Standard Time)
+[debug] [2019-11-07T07:48:34.649Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T07:48:34.649Z] 
+[debug] [2019-11-07T07:48:34.670Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T07:48:34.672Z] > authorizing via signed-in user
+[debug] [2019-11-07T07:48:34.672Z] [iam] checking project knownow-6d965 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2019-11-07T07:48:34.675Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/knownow-6d965:testIamPermissions  
+
+[debug] [2019-11-07T07:49:00.337Z] Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1095:19)
+    at Object.onceWrapper (events.js:286:20)
+    at TLSSocket.emit (events.js:203:15)
+    at TLSSocket.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established

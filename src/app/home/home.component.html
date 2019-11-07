@@ -1,15 +1,96 @@
 <div id="main">
-  <p>KnowNow</p>
-</div>
-<div id="content">
-  <img
-    src="assets/news-announcment-gif.gif"
-    alt=""
-    width="250px"
-    style="padding-top: 10px;"
-  />
-  <p>
-    A website that brings to you news from all around the world and provides you
-    a seamless experience of browsing through your favourite categories
+  <p style="font-size: 6vw">
+    <img
+      src="assets/news-announcment-gif.gif"
+      style="padding-top: 10px; width: 8vw;font-family: 'Yatra One', cursive;"
+    />
+    KnowNow
   </p>
 </div>
+<div id="content">
+  <br />
+  <div
+    style="border-radius: 20%; border: 2px solid white; display: inline-block; margin: 20px; padding: 10px"
+  >
+    <img src="assets/business.png" style="height: 15vw" />
+  </div>
+  <div
+    style="border-radius: 20%; border: 2px solid white; display: inline-block; margin: 20px; padding: 10px"
+  >
+    <img src="assets/sports.png" style="height: 15vw" />
+  </div>
+  <div
+    style="border-radius: 20%; border: 2px solid white; display: inline-block; margin: 20px; padding: 10px"
+  >
+    <img src="assets/tech.png" style="height: 15vw" />
+  </div>
+  <div
+    style="border-radius: 20%; border: 2px solid white; display: inline-block; margin: 20px; padding: 10px"
+  >
+    <img src="assets/pol2.png" style="height: 15vw;" />
+  </div>
+  <div
+    style="border-radius: 20%; border: 2px solid white; display: inline-block; margin: 20px; padding: 10px"
+  >
+    <img src="assets/science.png" style="height: 15vw" />
+  </div>
+  <p style="font-size: 2vw;font-family: 'Yatra One', cursive;">
+    A website that brings to you News from all around the world and provides you
+    a seamless experience of browsing through your favourite categories...
+  </p>
+</div>
+<!-- card -->
+<div class="container" style="margin-top:40px;">
+  <div class="">
+    <h2 style="font-family: 'Yatra One', cursive;">Trending News</h2>
+  </div>
+  <h2
+    *ngIf="!loader"
+    class="text-center"
+    style="font-family: 'Courier New', Courier, monospace;padding: 25px"
+  >
+    <img src="assets/loading.gif" />
+  </h2>
+  <div class="row">
+    <div
+      class="col-md-3"
+      *ngFor="let c of mydataArray"
+      style="margin-bottom:20px;"
+    >
+      <div class="card h-80 shadow p-3 mb-5 bg-white rounded">
+        <a href="{{ c.url }}">
+          <img
+            src="{{ c.urlToImage }}"
+            class="card-img-top"
+            height="200"
+            width="300px"
+          />
+        </a>
+        <div class="card-body">
+          <p class="card-title">{{ c.title.substring(0, 30) }}..</p>
+          <!-- <p class="card-text">{{ c.content.substring(0, 10) | json }}</p> -->
+          <span>{{ c.publishedAt }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div>
+  <button type="button" (click)="getNews()">click</button>
+</div> -->
+<!-- footer -->
+<footer
+  class="page-footer font-small blue"
+  style="background-color:#343a40;padding:10px;color:#fff"
+>
+  <br />
+  <!-- Copyright -->
+  <div
+    class="footer-copyright text-center py-3"
+    style="font-size: 24px;font-family: 'Yatra One', cursive;"
+  >
+    Created By : Team Nash
+    <a href="#"> meetteamNash.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>

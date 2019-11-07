@@ -26,4 +26,9 @@ export class NewsService {
   //     password: "abcd"
   //   });
   // }
+  getEveryNews() {
+    return this.http.get(
+      "https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com?pageSize=10&apiKey=ce4606c06f344265a5565d28c02443b8"
+    );
+  }
 }

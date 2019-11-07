@@ -1,27 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Yatra+One&display=swap");
 #navBar {
   background-color: black;
 }
 nav ul li.active {
-  background-color: green;
+  background-color: #fb8122;
 }
 a:hover:not(.active) {
-  background-color: green;
+  background-color: #fb8122;
 }
 #main {
-  background-color: rgba(0, 0, 0, 0.829);
+  background-color: #1d2228;
   text-align: center;
 }
 #main p {
   color: white;
-  padding: 100px;
+  padding: 15px;
   font-size: 80px;
   margin: 0px;
   font-family: Copperplate, Copperplate Gothic Light, fantasy;
 
-  border: 4px solid green;
+  border: 4px solid #fb8122;
 }
 #content {
-  background-color: rgba(0, 0, 0, 0.829);
+  background-color: #1d2228;
   text-align: center;
 }
 #content p {

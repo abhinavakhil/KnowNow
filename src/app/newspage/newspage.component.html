@@ -1,30 +1,35 @@
-<div class="container">
+<br />
+<div class="container-fluid">
   <h2
     *ngIf="!loader"
     class="text-center"
     style="font-family: 'Courier New', Courier, monospace;padding: 25px"
   >
-    <img src="assets/loading.gif" />
+    <img src="assets/loading-sphere.gif" />
+    <p>Loading ...</p>
   </h2>
   <div class="row">
     <div
-      class="col-md-3"
+      class="col-md-4"
       *ngFor="let c of mydataArray"
       style="margin-bottom:20px;"
     >
-      <div class="card h-100">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
         <a href="{{ c.url }}">
-          <img
-            src="{{ c.urlToImage }}"
-            class="card-img-top"
-            height="200"
-            width="300px"
-          />
+          <img src="{{ c.urlToImage }}" class="card-img-top" height="300px" />
         </a>
+        <div class="date" id="mypointer">
+          <div class="day">7</div>
+          <div class="month">Nov</div>
+        </div>
         <div class="card-body">
-          <p class="card-title">{{ c.title.substring(0, 30) }}..</p>
-          <!-- <p class="card-text">{{ c.content.substring(0, 10) | json }}</p> -->
-          <span>{{ c.publishedAt }}</span>
+          <h1 class="card-title" style="font-size:24px">
+            <b>{{ c.title.substring(0, 40) }}..</b>
+          </h1>
+          <p class="card-text" style="color:#e74c3c ;font-size:20px">
+            {{ c.description }}
+          </p>
+          <span>{{ c.publishedAt | date }}</span>
         </div>
       </div>
     </div>

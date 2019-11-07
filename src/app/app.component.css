@@ -15,6 +15,7 @@
 
 .nav-item {
   font-size: 1.4vw;
+  padding: 20px;
 }
 .myactive {
   color: #fff;

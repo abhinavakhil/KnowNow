@@ -6,3 +6,36 @@
   padding: 50px;
   align-items: center;
 }
+
+.card:hover {
+  transform: scale(2%);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap");
+.date {
+  background-color: #e74c3c;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 380px;
+  padding: 10px 0px !important;
+}
+.date,
+.month {
+  font-size: 14px;
+  font-family: "Yeon Sung", cursive;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+}
+
+@media only screen and (max-width: 920px) {
+  #mypointer {
+    display: none;
+  }
+}
